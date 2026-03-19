@@ -1,4 +1,4 @@
-# Silvia — Workout Tracker
+# Workout Tracker
 
 A React app to track your 4-day workout plan with progressive overload charts.
 
