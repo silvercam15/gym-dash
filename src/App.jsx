@@ -13,8 +13,8 @@ const WORKOUT_TABS = [...DAYS.map(d => ({ id: d.id, label: d.label })), { id: 'o
 
 const TOP_SECTIONS = [
   { id: 'workout', label: 'Fitness' },
-  { id: 'skating', label: 'Figure Skating' },
-  { id: 'news', label: 'Industry News' },
+  // { id: 'skating', label: 'Figure Skating' },
+  // { id: 'news', label: 'Industry News' },
 ]
 const allExerciseIds = DAYS.flatMap(d => d.exercises.map(e => e.id))
 
