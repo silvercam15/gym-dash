@@ -1,0 +1,195 @@
+.cal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  user-select: none;
+  margin-bottom: 20px;
+}
+
+/* Header */
+.header {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.calLabel {
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--muted);
+}
+
+.streakBadge {
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.monthName {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.2px;
+}
+
+.navBtn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  padding: 0;
+  padding-bottom: 1px;
+}
+
+.navBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+
+.weekday {
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--dim);
+  text-align: center;
+  padding-bottom: 6px;
+}
+
+.empty {
+  /* placeholder for leading cells */
+}
+
+/* Day cells */
+.day {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border-radius: var(--radius-sm);
+  cursor: default;
+  transition: background 0.12s;
+}
+
+.day:hover {
+  background: var(--surface2);
+}
+
+.dayNum {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  color: var(--text2);
+  line-height: 1;
+}
+
+/* Logged day */
+.logged {
+  background: var(--accent-dim);
+}
+
+.logged .dayNum {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.logged:hover {
+  background: var(--accent-dim);
+  filter: brightness(1.1);
+}
+
+/* Today ring */
+.today {
+  outline: 1.5px solid var(--accent);
+  outline-offset: -1.5px;
+}
+
+.today .dayNum {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Dot indicator */
+.dot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-top: 2px;
+  opacity: 0.7;
+  transition: transform 0.15s;
+}
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent-border);
+}
+
+.legendToday {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  outline: 1.5px solid var(--accent);
+}

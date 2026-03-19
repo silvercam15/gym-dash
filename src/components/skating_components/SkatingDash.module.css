@@ -1,0 +1,302 @@
+.wrap { padding-top: 0.25rem; }
+
+/* Stats */
+.statsRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 1.75rem;
+}
+
+.statCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+}
+
+.statLabel {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 8px;
+}
+
+.statVal {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.statOf {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.bigBar {
+  height: 4px;
+  background: var(--border2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.bigBarFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+/* Level cards */
+.levels { display: flex; flex-direction: column; gap: 10px; }
+
+.levelCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.levelCard:hover { border-color: var(--border2); }
+
+.levelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.levelLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.levelBadge {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge_blue   { background: rgba(126,184,247,0.12); color: var(--blue);   border: 1px solid rgba(126,184,247,0.25); }
+.badge_teal   { background: rgba(45,212,191,0.1);   color: #2dd4bf;       border: 1px solid rgba(45,212,191,0.2); }
+.badge_purple { background: rgba(167,139,250,0.12); color: #a78bfa;       border: 1px solid rgba(167,139,250,0.25); }
+.badge_amber  { background: rgba(240,176,96,0.12);  color: var(--amber);  border: 1px solid rgba(240,176,96,0.25); }
+.badge_coral  { background: rgba(255,130,100,0.12); color: #ff8264;       border: 1px solid rgba(255,130,100,0.25); }
+.badge_green  { background: rgba(74,222,128,0.1);   color: #4ade80;       border: 1px solid rgba(74,222,128,0.2); }
+.badge_pink   { background: rgba(244,114,182,0.12); color: #f472b6;       border: 1px solid rgba(244,114,182,0.25); }
+
+.progressBar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.progressTrack {
+  flex: 1;
+  height: 3px;
+  background: var(--border2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.chevron {
+  color: var(--dim);
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+  transform: rotate(90deg);
+  transition: transform 0.2s;
+  margin-left: 10px;
+  flex-shrink: 0;
+}
+
+.chevronOpen { transform: rotate(-90deg); color: var(--accent); }
+
+/* Skill list */
+.skillList {
+  border-top: 1px solid var(--border);
+  padding: 6px 0;
+}
+
+.skillWrapper { border-bottom: 1px solid var(--border); }
+.skillWrapper:last-child { border-bottom: none; }
+
+.skillRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.12s;
+  user-select: none;
+  gap: 12px;
+}
+
+.skillRow:hover { background: var(--surface2); }
+.skillOpen { background: var(--surface2) !important; }
+
+.skillLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dot_not_started { background: var(--dim); }
+.dot_learning    { background: var(--amber); }
+.dot_practicing  { background: var(--blue); }
+.dot_mastered    { background: var(--accent); }
+
+.skillName {
+  font-size: 13px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.skillRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.statusSelect {
+  background: var(--surface3);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  padding: 5px 8px;
+  color: var(--text);
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color 0.15s;
+  cursor: pointer;
+}
+
+.statusSelect:focus { border-color: var(--accent); }
+.statusSelect option { background: #1e1e1e; }
+
+/* Skill panel */
+.skillPanel {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 12px 16px 14px;
+}
+
+.noteForm {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.noteInput {
+  flex: 1;
+  background: var(--surface3);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  padding: 7px 10px;
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.noteInput:focus { border-color: var(--accent); }
+.noteInput::placeholder { color: var(--dim); }
+
+.noteBtn {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  padding: 7px 14px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 500;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.noteBtn:hover { background: var(--surface3); border-color: var(--accent); color: var(--accent); }
+
+.notes { display: flex; flex-direction: column; gap: 6px; }
+
+.noteItem {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 6px 10px;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.noteDate {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.noteText { font-size: 13px; color: var(--text2); flex: 1; }
+
+.noteDel {
+  background: none;
+  border: none;
+  color: var(--dim);
+  font-size: 10px;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  transition: color 0.15s;
+}
+
+.noteDel:hover { color: #ff6b6b; }
+
+.noNotes { font-size: 12px; color: var(--dim); font-style: italic; }
+
+.updatedAt {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: var(--dim);
+  margin-top: 10px;
+}
