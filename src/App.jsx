@@ -7,12 +7,14 @@ import DayView from './components/DayView'
 import Overview from './components/Overview'
 import WorkoutCalendar from './components/WorkoutCalendar'
 import WeightTracker from './components/WeightTracker'
+import MealPlan from './components/MealPlan'
 
 const WORKOUT_TABS = [...DAYS.map(d => ({ id: d.id, label: d.label })), { id: 'overview', label: 'Overview' }]
 
 const MIDDLE_SECTIONS = [
   {id: 'calendar', label: 'Calendar' },
-  {id: 'stats', label: 'Stats'}
+  {id: 'stats', label: 'Stats'},
+  {id: 'meal_plan', label: 'Meal Plan'}
 ]
 
 const allExerciseIds = DAYS.flatMap(d => d.exercises.map(e => e.id))
@@ -46,10 +48,13 @@ export default function App() {
       </nav>
       <div>
 
-        {calendarTab === 'calendar' ?
-          <WorkoutCalendar exerciseIds={allExerciseIds} getEntries={getEntries} /> 
-          : <WeightTracker /> 
-        }
+        {calendarTab === 'calendar' ? (
+          <WorkoutCalendar exerciseIds={allExerciseIds} getEntries={getEntries} />
+        ) : calendarTab === 'stats' ? (
+          <WeightTracker />
+        ) : (
+          <MealPlan />
+        )}
       </div>
 
       <nav className={styles.tabs}>
